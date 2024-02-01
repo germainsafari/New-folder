@@ -1,0 +1,262 @@
+1.You're creating a pipeline that includes two steps.
+Step 1 preprocesses some data, and step 2 uses the preprocessed data to train a model.
+What type of object should you use to pass data from step 1 to step 2 and create a dependency between these steps?
+Select one answer
+ 
+Datastore
+ 
+OutputFileDatasetConfig
+ 
+Dataset
+ 
+DO NOT PICK
+
+2.
+A command job fails with the error message ... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:10 AM
+A command job fails with the error message that a module isn't found.
+The data scientist used a curated environment and wants to add a specific Python package to create a custom environment and successfully run the job.
+Which file should be created before creating the custom environment that uses a curated environment as reference?
+Select one answer
+ 
+Training script
+ 
+Docker image
+ 
+Conda specification
+ 
+DO NOT PICK
+
+You're creating a pipeline that includes tw... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:10 AM
+You're creating a pipeline that includes two steps.
+Step 1 prepares some data, and step 2 uses the preprocessed data to train a model.
+Which option should you use as input to the second step to train the model?
+Select one answer
+ 
+pipeline_job_input
+ 
+prep_data.outputs.output_data
+ 
+train_model.outputs.model_output
+ 
+DO NOT PICK
+
+
+What does creating Custom Roles allow you t... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:10 AM
+What does creating Custom Roles allow you to do?
+Select one answer
+ 
+Custom roles allow you to customize what users can and can’t access in a workspace
+ 
+Custom roles allow you to only perform read-only actions in a workspace
+ 
+Custom roles allow you to customize the speaking voice used
+ 
+DO NOT PICK
+
+
+You've trained a model using the Python SDK... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:10 AM
+You've trained a model using the Python SDK for Azure Machine Learning. You want to deploy the model as a containerized real-time service with high scalability and security. What kind of compute should you create to host the service?
+Select one answer
+ 
+An Azure Kubernetes Services (AKS) inferencing cluster
+ 
+A compute instance with GPUs
+ 
+A training cluster with multiple nodes.
+ 
+DO NOT PICK
+
+
+
+CLI V2 Question - To tune hyperparameters w... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:11 AM
+CLI V2 Question - To tune hyperparameters with a sweep job, which compute can be used to train multiple models in parallel?
+Select one answer
+ 
+A compute cluster.
+ 
+A compute instance.
+ 
+An inference cluster.
+ 
+DO NOT PICK
+
+
+
+You've built a pipeline that you want to ru... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:11 AM
+You've built a pipeline that you want to run every week. You want to take a simple approach to creating a schedule.
+Which class can you use to create the schedule that runs once per week?
+Select one answer
+ 
+RecurrencePattern
+ 
+JobSchedule
+ 
+RecurrenceTrigger
+ 
+DO NOT PICK
+
+
+Question 8/31 Link PreviousNext Why use a v... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:11 AM
+Edited
+Question 8/31
+PreviousNext
+Why use a virtual private network (VPN) for machine learning?
+Select one answer
+ 
+To assign roles
+ 
+To secure your training models and data from malicious actors by encrypting your connection
+ 
+To deploy your models
+ 
+To work offline
+
+
+
+Question 9/31 Link PreviousNext CLI V2 Ques... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:12 AM
+Question 9/31
+PreviousNext
+CLI V2 Question - A data scientist wants to create an environment to run a Python script on a compute cluster.
+Using the below command:
+az ml environment create --file basic-env.yml 
+What should basic-env.yml contain?
+Select one answer
+ 
+The environment name and version.
+ 
+The packages and libraries that need to be installed on the compute cluster to run the script.
+ 
+The type and size of the compute cluster that needs to be created.
+ 
+DO NOT PICK
+
+
+Question 10/31 Link PreviousNext CLI V2 Que... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:12 AM
+Question 10/31
+PreviousNext
+CLI V2 Question - A data scientist wants to train a model as a command job.
+Which three things should be referred to in the YAML file?
+Select one answer
+ 
+The training script, the dataset, the compute.
+ 
+The training script, the dataset, the environment.
+ 
+The training script, the environment, the compute.
+ 
+DO NOT PICK
+
+
+
+Question 11/31 Link PreviousNext You are cr... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:12 AM
+Question 11/31
+PreviousNext
+You are creating a batch inferencing pipeline that you want to use to predict new values for a large volume of data files.
+You want the pipeline to run the scoring script on multiple nodes and collate the results.
+What kind of step should you include in the pipeline?
+Select one answer
+ 
+PythonScriptStep
+ 
+ParallelRunStep
+ 
+AdlaStep
+ 
+Do not pick
+ 
+DO NOT PICK
+
+
+Question 12/31 Link PreviousNext You want a... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:12 AM
+Question 12/31
+PreviousNext
+You want a script to stream data directly from a file dataset. Which mode should you use?
+Select one answer
+ 
+as_mount()
+ 
+as_download()
+ 
+as_upload()
+ 
+DO NOT PICK
+
+
+
+Question 13/31 Link PreviousNext You are cr... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:13 AM
+Question 13/31
+PreviousNext
+You are creating a batch endpoint that you want to use to predict new values for a large volume of data files. You want the pipeline to run the scoring script on multiple nodes and collate the results. What output action should you choose for the deployment?
+Select one answer
+ 
+summary_only
+ 
+append_row
+ 
+concurrency
+ 
+DO NOT PICK
+
+
+
+Question 14/31 Link PreviousNext A data sci... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:13 AM
+Question 14/31
+PreviousNext
+A data scientist trains a regression model and wants to track the model's performance by storing the Root Mean Squared Error (RMSE) with the experiment run.
+Which method can be used to log the RMSE?
+Select one answer
+ 
+mlflow.log_param()
+ 
+mlflow.log_artifact()
+ 
+mlflow.log_metric()
+ 
+DO NOT PICK
+
+
+
+Question 15/31 Link PreviousNext A data sci... by Germain Safari (LTIMINDTREE LIMITED)
+Germain Safari (LTIMINDTREE LIMITED) (External)
+10:13 AM
+Question 15/31
+PreviousNext
+A data scientist wants to run a script as a command job to train a PyTorch model, setting the batch size and learning rate hyperparameters to specified values each time the job runs.
+What should be done by the data scientist?
+Select one answer
+ 
+Create multiple script files – one for each batch size and learning rate combination you want to use.
+ 
+Set the batch size and learning rate properties of the command job before submitting the job.
+ 
+Add arguments for batch size and learning rate to the script, and set them in the command property of the command job.
+ 
+DO NOT PICK
+
+
