@@ -259,4 +259,255 @@ Add arguments for batch size and learning rate to the script, and set them in th
  
 DO NOT PICK
 
-
+[11:02 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 16/31
+PreviousNext
+In which situation can a data scientist benefit the most from using GPU compute?
+Select one answer
+ 
+When training a forecasting model on time-series data.
+ 
+When training a computer vision model to classify images.
+ 
+When training a logistic regression model to predict customer churn.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:02 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 17/31
+PreviousNext
+Which approach should be used to monitor the GPU usage of a specific Azure Machine Learning run?
+Select one answer
+ 
+Explore the metrics of the Azure Machine Learning workspace in the Azure portal.
+ 
+Explore the Details tab of the run in the Azure Machine Learning studio.
+ 
+Explore the Monitoring tab of the run in the Azure Machine Learning studio.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 18/31
+PreviousNext
+A data scientist wants to train a machine learning model to predict the sales of supermarket items to adjust the supply to the projected demand.
+What type of machine learning task will the model perform?
+Select one answer
+ 
+Classification.
+ 
+Regression.
+ 
+Time-series forecasting.
+ 
+Detection
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 19/31
+PreviousNext
+The data scientist wants to run a single script to train a model. What type of job is the best fit to run a single script?
+Select one answer
+ 
+Command
+ 
+Pipeline
+ 
+Sweep
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 20/31
+PreviousNext
+You want to use automated machine learning to find the model with the best AUC_weighted metric.
+Which parameter of the AutoMLConfig object should you set?
+Select one answer
+ 
+task='AUC_weighted'
+ 
+label_column_name= 'AUC_weighted'
+ 
+primary_metric='AUC_weighted'
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 21/31
+PreviousNext
+You have a reference to a Workspace named ws. Which code retrieves the default datastore for the workspace?
+Select one answer
+ 
+default_ds = Datastore.get(ws, 'default')
+ 
+default_ds = ws.Datastores[0]
+ 
+default_ds = ws.get_default_datastore()
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 22/31
+PreviousNext
+You're working in Visual Studio Code. You cloned a GitHub repository to Visual Studio Code and you're editing code in a Jupyter notebook.
+To test the code, you want to run a cell within the notebook.
+Which compute should you use?
+Select one answer
+ 
+Compute instance
+ 
+Compute cluster
+ 
+Azure Databricks cluster
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:03 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 23/31
+PreviousNext
+A data scientist created a script that trains a machine learning model using the open-source library scikit-learn.
+The data scientist wants to quickly test whether the script can run on the existing compute cluster, what type of environment should the data scientist use?
+Select one answer
+ 
+Default
+ 
+Curated
+ 
+Custom
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 24/31
+PreviousNext
+You want to use a script-based experiment to train a PyTorch model, setting the batch size and learning rate hyperparameters to specified values each time the experiment runs.
+What should you do?
+Select one answer
+ 
+Create multiple script files – one for each batch size and learning rate combination you want to use.
+ 
+Set the batch_size and learning_rate properties of the ScriptRunConfig before running the experiment.
+ 
+Add arguments for batch size and learning rate to the script, and set them in the arguments property of the ScriptRunConfig.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 25/31
+PreviousNext
+A data scientist has preprocessed the training data and wants to use automated machine learning to quickly iterate through various algorithms. The data shouldn't be changed.
+What should be the featurization mode to train a model without letting automated machine learning make changes to the data?
+Select one answer
+ 
+auto
+ 
+custom
+ 
+off
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 26/31
+PreviousNext
+You have run an experiment to train a model.
+You want the model to be stored in the workspace, and available to other experiments and published services.
+What should you do?
+Select one answer
+ 
+Register the model in the workspace.
+ 
+Save the model as a file in a Compute Instance.
+ 
+Save the experiment script as a notebook.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 27/31
+PreviousNext
+You have multiple models deployed to a batch endpoint. You invoke the endpoint without indicating which model you want to use.
+Which deployed model will do the actual batch scoring?
+Select one answer
+ 
+The latest version of the deployed model.
+ 
+The latest deployed model.
+ 
+The default deployed model.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 28/31
+PreviousNext
+What would you use the Azure Key Vault for?
+Select one answer
+ 
+To hide your training models and data
+ 
+To securely store and access secrets
+ 
+To hide your Azure information such as subscription information
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:04 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 29/31
+PreviousNext
+A data scientist needs access to the Azure Machine Learning workspace to run a script as a job.
+Which role should be used to give the data scientist the necessary access to the workspace?
+Select one answer
+ 
+Reader.
+ 
+AzureML Data Scientist.
+ 
+AzureML Compute Operator.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:05 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 30/31
+PreviousNext
+You plan to use hyperparameter tuning to find optimal discrete values for a set of hyperparameters. You want to try every possible combination of a set of specified discrete values.
+Which kind of sampling should you use?
+Select one answer
+ 
+Random sampling
+ 
+Grid sampling
+ 
+Bayesian sampling
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
+[11:05 AM] Germain Safari (LTIMINDTREE LIMITED)
+Question 31/31
+PreviousNext
+A datastore contains a CSV file of structured data that you want to use as a Pandas dataframe. Which kind of object should you create to make it easy to do this?
+Select one answer
+ 
+A datastore.
+ 
+A tabular dataset.
+ 
+A file dataset.
+ 
+DO NOT PICK
+Cloud Academy
+Accelerate progress up the cloud curve with Cloud Academy's digital training solutions. Build a culture of cloud with technology and guided learning experiences.
