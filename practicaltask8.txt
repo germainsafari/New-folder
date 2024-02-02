@@ -1,0 +1,34 @@
+import numpy as np
+
+# Parameters
+S0 = 100      # initial stock price
+K = 105       # strike price
+T = 1.0       # time-to-maturity
+r = 0.05      # risk free rate
+sigma = 0.2   # volatility
+M = 50        # number of time steps
+dt = T / M    # time interval
+I = 250000    # number of simulations
+
+# Simulating I paths with M time steps
+np.random.seed(0)
+S = S0 * np.exp(np.cumsum((r - 0.5 * sigma ** 2) * dt
+    + sigma * np.sqrt(dt) * np.random.standard_normal((M + 1, I)), axis=0))
+S[0] = S0
+
+# Calculating the Monte Carlo estimator
+h = np.maximum(S - K, 0)
+
+# Valuation Algorithm
+V = np.zeros_like(h)
+V[-1] = h[-1]
+for t in range(M - 1, 0, -1):
+    reg = np.polyfit(S[t], V[t + 1] * np.exp(-r * dt), 5)
+    C = np.polyval(reg, S[t])
+    V[t] = np.where(h[t] > C, h[t], V[t + 1] * np.exp(-r * dt))
+
+# Monte Carlo estimate
+z = 0.0
+for t in range(1, M + 1):
+    z += np.sum(V[t] * np.exp(-r * t * dt))
+print('American option value %5.3f' % (z / I))
