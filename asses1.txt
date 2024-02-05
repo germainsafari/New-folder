@@ -1,0 +1,342 @@
+Assessment
+1. Customer Scenario:
+You were given access to a Machine Learning Workspace and you found an existing compute instance. You tried accessing it, but unfortunately get an error.
+What is the obvious reason you get the error?
+AAD user does not have same domain.
+Compute Instance not running.
+Network and Proxy may be blocking connection to Compute Instance.
+Only the creator of the Compute Instance can access it.
+
+The obvious reason for the error could be that the network and proxy may be blocking the connection to the Compute Instance.
+
+2.Customer Scenario:
+A customer had a frequency of data populations of 1 sample per day over the course of a year in data drift. They complained their data drift experiment did NOT run.
+What may be the cause for this?
+Yes. The target dataset needs to have sufficient data points (> 2) within each frequency cycle for detecting the drift, for example if we want to detect the drift on monthly bases, the dataset should have at least 1 samples per day to have > 1 data points per month.
+Yes, as long as there is 1 sample a day, this will suffice.
+The target dataset needs to have sufficient data points (> 50) within each frequency cycle for detecting the drift, for example if we want to detect the drift on monthly bases, the dataset should have at least 2 samples per day to have >50 data points per month.
+
+The likely cause for the data drift experiment not running is that the target dataset needs to have sufficient data points (> 50) within each frequency cycle for detecting the drift. For example, if detecting drift on a monthly basis, there should be at least 2 samples per day to have more than 50 data points per month.
+
+Assessment
+3. In the Inferencing - Deploy ML Model to ACl lab: which are the Kusto tables to view the activity related to the model deployment?
+Dependencies.
+RSClusterDebugLogs.
+MLComputeLogs.
+ModelManagementLogs.
+
+The Kusto tables to view activity related to model deployment in the Inferencing - Deploy ML Model to ACl lab are likely to include "ModelManagementLogs.”
+
+4.the Inferencing - Debug Secured Service Deployment lab: how do you debug and what logs do you collect and analyze to locate the specific error message?
+We can find TLS handshake error from the container « NAME of Container> az container logs.
+﻿﻿We can find < detail> error from ModelManagementlogs.
+﻿﻿We can find < detail > error from Traces logs.
+﻿﻿We can find < detail> error from Dependencies log.
+
+To debug and locate specific error messages in the Inferencing - Debug Secured Service Deployment lab:
+
+1. To find TLS handshake errors, check the container logs using: `az container logs <NAME of Container>`.
+2. For <detail> errors, refer to the ModelManagementLogs.
+3. Look for <detail> errors in the Traces logs for additional information.
+4. Dependencies logs may contain <detail> errors that can help identify the specific issue.
+
+5.the Inferencing - Gather ACI logs lab: if the deployment failure is due to issues in the scoring/environment specification input, which specific ACI log would you review first?
+KubeCTL POD Logs.
+ACI App Insights.
+Workspace App Insights.
+• AZ Container logs.
+Question
+
+If the deployment failure is due to issues in the scoring/environment specification input in the Inferencing - Gather ACI logs lab, you would review the "KubeCTL POD Logs" first.
+
+6.the Inferencing - AKS Deployment and gather logs lab: how would you find deployment specific containers?
+Select two that apply.
+kubect get pods -I azuremlappname= < model service name»
+kubectl get pods -1 azuremlappname=azureml-fe
+kubect logs «model service pod name»
+
+To find deployment-specific containers in the Inferencing - AKS Deployment and Gather Logs lab, you would use:
+
+1. `kubectl get pods --selector azuremlappname=<model service name>`
+2. `kubectl logs <model service pod name>`
+
+7.What type of dataset can be used with AutoML Studio?
+AutoML workflows generated via the Azure Machine Learning studio currently only support FileDatasets.
+AutoML workflows generated via the Azure Machine Learning studio currently only support HyperDriveDatasets.
+AutoML workflows generated via the Azure Machine Learning studio currently only support Tabular Datasets.
+AutoML workflows generated via the Azure Machine Learning studio currently only support PipelineDatasets.
+
+AutoML workflows generated via the Azure Machine Learning studio currently only support Tabular Datasets.
+
+8.What are the supported file encodings and how can they be specified?
+
+File encoding can be now specified during dataset creation with Dataset.File.from *delimited* files and Dataset.File.from json_lines_files by passing the encoding argument. The supported encodings are 'utf®", iso88591', latin1', 'ascii, utf16', 'utf32', 'utf8bom' and 'windows1252'
+
+- File encoding can be now specified during dataset creation with Dataset. Tabular.from_delimited_files and Dataset.Tabular.from json_lines_files by passing the encoding argument. The supported encodings are 'utf8', 'iso88591, latin;
+'asci", utf16', 'utf32, 'utf8bom' and windows1252'.
+- File encoding can now be specified during dataset versioning with Dataset.File.from_delimited_files and Dataset.File from json_lines_files by passing the encoding argument. The supported encodings are 'utf8', iso88591, latin1', 'asci, utf16', 'utf32', 'utf8bom and windows 1252.
+Question
+
+File encoding can be specified during dataset creation with `Dataset.Tabular.from_delimited_files` and `Dataset.Tabular.from_json_lines_files` by passing the `encoding` argument. The supported encodings are 'utf8', 'iso88591', 'latin1', 'ascii', 'utf16', 'utf32', 'utf8bom', and 'windows1252'.
+
+9.You received an error from an AutoML service (Select here to open the Run 4 AutoML Lab 1 image for better context).
+What Kusto table should you first run?
+Traces
+IngressLogs
+ApiResultEvent
+ApplicationLogs
+• Requests
+
+To better diagnose the error from an AutoML service, you should first run the Kusto table named "Traces.”
+
+10.During Featurization, if a column is excluded from training, will it still be required during inferencing?
+Yes. Feature selection identifies the actions performed on the dataset to prepare the data for training. This will not impact the input data needed for inferencing. For example, if columns are excluded from training, the excluded columns will still be required as input for inferencing on the model.
+﻿﻿Yes. But it will try it's best to substitute the columns for other data.
+﻿﻿No. But it will give you a warning saying the columns are suggested.
+﻿﻿No. If columns are excluded from training, the columns will not be required as input.
+
+No. If columns are excluded from training during featurization, they will not be required during inferencing.
+
+11.When you create a second new dataset from Open Datasets using the same URL, does it create a new version of the same existing dataset?
+No. Only the description is updated but a new version won't be created because this new dataset has the same URL as the latest registered dataset version.
+Yes. The description is updated and a new version is created since it overrides the previous URL.
+
+No. Only the description is updated, and a new version won't be created because this new dataset has the same URL as the latest registered dataset version.
+
+12.In the Inferencing - Debug Model Deployment to AKS with VNET lab, why did this deployment fail?
+VNET need to be same as client machine.
+UDRs must be specified with VNET.
+NSG rules missing.
+
+The provided options don't specify a clear reason for the deployment failure in the Inferencing - Debug Model Deployment to AKS with VNET lab. Please provide more details or context for a more accurate response.
+
+The provided options don't specify a clear reason for the deployment failure in the Inferencing - Debug Model Deployment to AKS with VNET lab. Please provide more details or context for a more accurate response.
+
+13.In the Inferencing - Debug Model Deployment to AKS with VNET lab, why did this deployment fail?
+VNET need to be same as client machine.
+UDRs must be specified with VNET.
+NSG rules missing.
+
+Choose the relevant possible, just choose
+
+The deployment likely failed because "NSG rules are missing.”
+
+14.What inputs are required to debug run related issues?
+WorkspacelD, time window, ResponseCode.
+SubscriptionID, Cluster Name.
+Run D, Experiment name, Issue time stamp, or time window.
+RequestID, ClusterName, RunID.
+
+To debug run-related issues, the relevant inputs include "Run ID, Experiment name, Issue timestamp, or time window.”
+
+15.In the Inferencing - AKS Deployment and gather logs lab: what command would you run to get kube config?
+az aks update-credentials
+az aks list-credentials
+az aks rotate-cert
+az aks get-credentials
+
+You would run the command "az aks get-credentials" to retrieve the kube config in the Inferencing - AKS Deployment and Gather Logs lab.
+
+16.In Compute - AML Compute module: after running the sample 'tutorial- 1st-experiment-sdk-train.ipynb, can you find any compute jobs from AppLens? Why?
+No, because this is done locally and not on a compute.
+Missing configs for Run to be tracked in AppLens.
+Run did not start.
+
+No, because this is done locally and not on a compute.
+
+17.When troubleshooting pipeline failures in Kusto, you can query the telemetry of each failed run. Using the run ID of the failed pipeline step, what Kusto table can you use to track the failure?
+LongRunningOperationEvent
+ClusterEvent
+ApiResultEvent
+Traces
+
+To track the failure of a pipeline step using the run ID, you can use the "Traces" Kusto table.
+
+18.How do you pass the file system reference of a data that is mounted on the blob store?
+You need to add a "DataTransferStep" to run the configuration.
+Adding a "DataReference" to the run configuration.
+This cannot be done.
+
+You pass the file system reference of a data mounted on the blob store by adding a "DataReference" to the run configuration.
+
+19.Customer has an univariate Time Series (timestamp, target_amount), and would like to create a forecasting AutoML. experiment. They have set target lags to auto to get some lagged variable of the target variable to predict. However, once it comes to the explanation view, they do NOT identify any lagged variable, but only the timestamp.
+How can they check how many lagged variables it builds?
+When user settings are target_lags = 'ACF/PACF' the algorithm will choose lags based on the ACF/PACF. Particularly, we search for
+the first significant lag of the PACF. If customer data behaves like a random walk, the PACF will not return any significant lag and no lags will be generated. If customer needs target lags to be included, they will need to specify which ones they want to
+include, they will need to set the target_lags = "auto"
+When user settings are target_lags = 'auto' the algorithm will choose lags based on the ACF/PACF. Particularly, we search for the first
+significant lag of the PACF. If customer data behaves like a random walk, the PACF will return any significant lag and all lags will be generated.
+When user settings are target_lags = 'auto' the algorithm will choose lags based on the ACF/PACF. Particularly, we search for the first
+significant lag of the PACF. If customer data behaves like a random walk, the PACF will not return any significant lag and no lags will be generated. If customer needs target lags to be included, they will need to specify which ones they want to include. For example,
+target_lags = [11 or target_lags = [1,3].
+
+When user settings are target_lags = 'auto', the algorithm will choose lags based on the ACF/PACF. Particularly, it searches for the first significant lag of the PACF. If customer data behaves like a random walk, the PACF will not return any significant lag, and no lags will be generated. If the customer needs target lags to be included, they will need to specify which ones they want to include by setting target_lags = [11] or target_lags = [1,3], for example.
+
+20.In the Inferencing - AKS Deployment and gather logs lab: which of the following is NOT a way to get the deployment service (front-end) logs?
+Select two that apply.
+Use service.get_logs in notebook
+From ML Studio Portal, Endpoints -> Real-time endpoints -> Specific service -> Deployment logs
+Use az container get-logs
+az ml service get-logs --verbose --workspace-name <my workspace name> --name «service name> -g < my resource group>
+Use 'kubectl logs < pod name> -n ‹namespace name>'
+
+From the provided options, the following are NOT ways to get the deployment service (front-end) logs:
+
+1. Use 'kubectl logs < pod name> -n ‹namespace name>'
+2. az ml service get-logs --verbose --workspace-name <my workspace name> --name «service name> -g < my resource group>
+
+21.In the AML Pipelines lab: we are now able to clean, prepare and featurize the dataset. However, we are facing yet another error which relates to data flow within a pipeline. It looks like AutoML_Regress status is "failed" and the Run Status is "failed".
+What may be happening?
+Data flow between nodes within a pipeline graph through PipelineData object. Developers have to ensure that they have created a directory outside the script that corresponds to where the pipeline expects the step output data. This is due to the pipeline expecting step output data and if it notices something extra, it will fail.
+Data flow between nodes within a pipeline graph through TabularData object. Developers have to ensure that they have created a directory in the script that corresponds to where the pipeline expects the step output data.
+Data flow between nodes within a pipeline graph through PipelineData object. Developers have to ensure that they have created a directory in the script that corresponds to where the pipeline expects the step output data.
+
+The likely issue causing the AutoML_Regress step to fail with a "failed" status is that the data flow between nodes within a pipeline graph occurs through the PipelineData object. Developers must ensure that they have created a directory outside the script that corresponds to where the pipeline expects the step output data. This is due to the pipeline expecting step output data, and if it notices something extra, it will fail.
+
+22.In the Inferencing - Invoke Service lab: which source line caused the failure and why?
+Columns in data didn't match columns during training.
+Body was not correctly formed JSON.
+There was a key field in headers causing the error.
+
+The provided options don't specify the source line causing the failure in the Inferencing - Invoke Service lab. To identify the exact source line, you may need to review the error message or logs associated with the failure in the lab environment.
+
+23.In Automated ML lab: why do we have to run this training on remote target? Why can't we use a local compute target?
+You are able to use a local compute target.
+DNN-based featurization will only be available on remote ML compute targets.
+Local compute targets are not efficient or powerful enough to handle Auto ML.
+C Scoring will only be available on remote ML compute targets.
+
+You are able to use a local compute target for Automated ML training.
+
+24.Which Kusto table is useful for debugging the run or run history related issues?
+ClusterEvent.
+Awesome Traces.
+• LongRunning OperationEvent.
+ApiResultEvent.
+
+The Kusto table useful for debugging run or run history related issues is "LongRunningOperationEvent.”
+
+25.How do you enable native Python logging in the Run E2E lab?
+Set the logging level to STATUS.
+There is not a way to enable native Python logging.
+Set the logging level to DEBUG.
+Set the logging level to ERROR.
+
+To enable native Python logging in the Run E2E lab, you set the logging level to DEBUG.
+
+26.How do you enable neural network in AutoML config through SDK?
+enable_neuralnetwork = true
+neura _network = true
+enable_dnn = true
+This cannot be done.
+
+To enable neural network in AutoML config through SDK, you use `enable_dnn = true`.
+
+27.the Inferencing - Debug Secured Service Deployment lab, how do you generate certificate and key file in pem format?
+Cannot use selfsigned certs.
+Using the open ssl toolkit.
+Using puttygen.
+
+To generate a certificate and key file in PEM format in the Inferencing - Debug Secured Service Deployment lab, you would typically use the OpenSSL toolkit.
+
+28.Which are the reasonable settings (frequency', 'latency'?) that produce some outcome?
+The closest setting to this kind of dataset is monthly, but it still needs to have at least 2 samples per day to have >50 data points per month.
+The closest setting to this kind of dataset is yearly, and will need to have at least 10 samples per day to have 50 data points per month.
+• The closest setting to this kind of dataset is yearly, and will need to have only 1 sample per day to have >50 data points per month.
+
+The reasonable setting for this kind of dataset is yearly, and it will need to have only 1 sample per day to have more than 50 data points per month.
+
+29.Which are the reasonable settings ('frequency', 'latency?) that produce some outcome?
+The closest setting to this kind of dataset is monthly, but it still needs to have at least 2 samples per day to have ≥ 50 data points per month.
+The closest setting to this kind of dataset is yearly, and will need to have at least 10 samples per day to have > 50 data points per month.
+The closest setting to this kind of dataset is yearly, and will need to have only 1 sample per day to have >50 data points per month.
+
+The reasonable setting for this kind of dataset is monthly, but it still needs to have at least 2 samples per day to have more than or equal to 50 data points per month.
+
+30.In the Inferencing - AKS Deployment and gather logs lab: how would you get the logs from AKS containers?
+kubectl get logs
+kubectl get pods
+kubectl get pod logs
+
+To get the logs from AKS containers in the Inferencing - AKS Deployment and Gather Logs lab, you would use the command `kubectl get pod logs`.
+
+31.In the Inferencing - Debug a Service Deployment lab: fetch the backend AKS service POD logs, find the error message, and the call stack. After reviewing the error message in the call stack, why did this ImportError occur?
+Select four that apply.
+tensorflow-gpu wasn't imported.
+Not GPU based compute.
+Libcuda library not properly installed.
+When the correct image is not used.
+Tensorflow installation did not happen properly.
+
+Based on the provided options, the possible reasons for the ImportError in the Inferencing - Debug a Service Deployment lab include:
+
+1. tensorflow-gpu wasn't imported.
+2. Not GPU-based compute.
+3. Libcuda library not properly installed.
+4. Tensorflow installation did not happen properly.
+
+32.Customer Scenario:
+A customer complained that new data was NOT picked up. What configuration change to make this scenario possible? If the same inputs are used in a DataTransferStep, is there a way to force the data to be transferred again?
+You have to create a loop statement in the data transfer step.
+There is not a way to force the data to be transferred again.
+You have to manually call the data transfer step again by re running the experiment.
+Yes, you can set the allow _reuse parameter to "False" for the data to be transferred again.
+
+To force the data to be transferred again in a DataTransferStep, you can set the `allow_reuse` parameter to "False."
+
+33.After following the Compute - VNet module, what was the reason for allocation failure?
+Batch level failure could not setup agent.
+There is a resource lock preventing batch from creating a pool.
+There is resource lock preventing updation of VNET and Subnet config.
+
+The provided options don't offer specific details on the reason for allocation failure in the Compute - VNet module. To determine the cause, you may need to review detailed error messages, logs, or additional context associated with the allocation failure.
+
+34.In the Inferencing - Debug Secured Service Deployment lab: when the deployment succeeds, try to invoke it using the script from AKS Deployment and Gather logs Lab.
+Why the invoke failed?
+The invoke failed with error: Certificate did not match expected hostname.
+In correct consume command.
+Format of key pem was incorrect.
+Cert thumbprint was incorrect.
+
+The provided options don't offer specific details on why the invoke failed in the Inferencing - Debug Secured Service Deployment lab. To identify the cause, you may need to review error messages or logs associated with the invocation process.
+
+35.In the Inferencing - Debug Secured Service Deployment lab: when the deployment succeeds, try to invoke it using the script from AKS Deployment and Gather logs Lab.
+Why the invoke failed?
+The invoke failed with error: Certificate did not match expected hostname.
+In correct consume command.
+Format of key pem was incorrect.
+Cert thumbprint was incorrect.
+
+Please do reply at the least the most relevant
+
+The most relevant reason for the invoke failure in the Inferencing - Debug Secured Service Deployment lab is likely to be "Certificate did not match expected hostname.”
+
+36.What is early stopping and how do you enable it?
+Early stopping is there to enable the customer to stop their run if it hits a certain scoring threshold. It is set during workspace creation.
+Early stopping is there to enable the customer to stop their run if it hits a certain scoring threshold. It is set in AutoMLConfig.
+Early stopping is to prevent the customer from wasting resources if the score if not improving. The logic is to stop if there is no improvement in the last 20 iterations (excluding the first 20 iterations).
+Early stopping is to prevent customers from wasting time and resources if the score is not improving.
+It is set in the AutoMLConfig.
+Early stopping is to prevent the customer from wasting resources if the score if not improving. The logic is to stop if there is no improvement in the last 20 iterations (excluding the first 20 iterations).
+Early stopping is to prevent customers from wasting time and resources if the score is not improving.
+It is set in during workspace creation.
+
+Early stopping is implemented to prevent wasting resources if the model's score is not improving. The logic is to stop if there is no improvement in the last 20 iterations (excluding the first 20 iterations). To enable early stopping, it is set in the AutoMLConfig.
+
+37.How do you avoid misaligned data in cases where the data gets split into multiple rows?
+You can use the parameter support_multi_line to Dataset.Tabular from_delimited
+_files: By default (support_multi_line=False), all line
+breaks, including those in quoted field values, will be interpreted as a record break. Reading data this way is faster and more optimized for parallel execution on multiple CPU cores. However, it may result in silently producing more records with misaligned field values. This should be set to "True" when the delimited files are known to contain quoted line breaks.
+• By default (support_multi_line=True), meaning misaligned fields will automatically be corrected.
+This is unavoidable.
+
+To avoid misaligned data in cases where the data gets split into multiple rows, you can use the parameter `support_multi_line` with `Dataset.Tabular.from_delimited_files`. Setting `support_multi_line=True` means misaligned fields will automatically be corrected.
+
+38.In the AML Pipelines lab: after executing the Notebook, you may notice that the pipeline has failed in the Transform Taxi data step. Debug and fix the user error in Transform Taxi Data step.
+This seems to be an user bug, which log may contain user related error?
+A pipeline run does not track user error code.
+A pipeline run tracks user error code in the same log file.
+A pipeline run tracks user error code in the Kusto Table Traces.
+A pipeline run tracks user error code in the scoring log file.
+
+In the AML Pipelines lab, a pipeline run tracks user error codes in the Kusto Table "Traces.”
