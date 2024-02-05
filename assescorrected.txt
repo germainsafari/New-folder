@@ -4,3 +4,17 @@ The obvious reason for the error could be that the network and proxy may be bloc
 2.Customer Scenario: A customer had a frequency of data populations of 1 sample per day over the course of a year in data drift. They complained their data drift experiment did NOT run. What may be the cause for this? Yes. The target dataset needs to have sufficient data points (> 2) within each frequency cycle for detecting the drift, for example if we want to detect the drift on monthly bases, the dataset should have at least 1 samples per day to have > 1 data points per month. Yes, as long as there is 1 sample a day, this will suffice. The target dataset needs to have sufficient data points (> 50) within each frequency cycle for detecting the drift, for example if we want to detect the drift on monthly bases, the dataset should have at least 2 samples per day to have >50 data points per month.
 
 The likely cause for the data drift experiment not running is that the target dataset needs to have sufficient data points (> 50) within each frequency cycle for detecting the drift. For example, if detecting drift on a monthly basis, there should be at least 2 samples per day to have more than 50 data points per month.
+
+Assessment 3. In the Inferencing - Deploy ML Model to ACl lab: which are the Kusto tables to view the activity related to the model deployment? Dependencies. RSClusterDebugLogs. MLComputeLogs. ModelManagementLogs.
+
+The Kusto tables to view activity related to model deployment in the Inferencing - Deploy ML Model to ACl lab are likely to include "ModelManagementLogs.”
+
+4.the Inferencing - Debug Secured Service Deployment lab: how do you debug and what logs do you collect and analyze to locate the specific error message? We can find TLS handshake error from the container « NAME of Container> az container logs. ﻿﻿We can find < detail> error from ModelManagementlogs. ﻿﻿We can find < detail > error from Traces logs. ﻿﻿We can find < detail> error from Dependencies log.
+
+To debug and locate specific error messages in the Inferencing - Debug Secured Service Deployment lab:
+
+To find TLS handshake errors, check the container logs using: az container logs <NAME of Container>.
+For errors, refer to the ModelManagementLogs.
+Look for errors in the Traces logs for additional information.
+Dependencies logs may contain errors that can help identify the specific issue.
+5.the Inferencing - Gather ACI logs lab: if the deployment failure is due to issues in the scoring/environment specification input, which specific ACI log would you review first? KubeCTL POD Logs. ACI App Insights. Workspace App Insights. • AZ Container logs. Question
