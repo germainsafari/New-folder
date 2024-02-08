@@ -17,4 +17,4 @@ To find TLS handshake errors, check the container logs using: az container logs 
 For errors, refer to the ModelManagementLogs.
 Look for errors in the Traces logs for additional information.
 Dependencies logs may contain errors that can help identify the specific issue.
-5.the Inferencing - Gather ACI logs lab: if the deployment failure is due to issues in the scoring/environment specification input, which specific ACI log would you review first? KubeCTL POD Logs. ACI App Insights. Workspace App Insights. • AZ Container logs. Question
+5.the Inferencing - Gather ACI logs lab: if the deployment failure is due to issues in the scoring/environment specification input, which specific ACI log would you review first? KubeCTL POD Logs. ACI App Insights. Workspace App Insights. • AZ Container logs. Questiondd
